@@ -7,7 +7,7 @@ const teachersLogin = () => {
   return (
     <div>
       <h1> teacher Login</h1>
-      <button onClick={() => router.push("/login")}>  back</button>
+      <button onClick={() => router.push("/login")}> back</button>
     </div>
   );
 };
