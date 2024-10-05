@@ -1,33 +1,28 @@
 "use client";
 import { useState } from "react";
 import styles from "./page.module.css";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
-  const [name, setName] = useState("anil");
-  const changeName = () => {
-    if (name === "anil") setName("yogesh");
-    else setName("anil");
-  };
-  const InnerComp = () => {
-    return <h1>"YOGESH SAINI"</h1>;
+  const router = useRouter();
+  const navigate = (routeName) => {
+    router.push(routeName);
   };
   return (
     <div>
-      <h1> Hello world! {name}</h1>
-      <Name name="yogesh" />
-      <Name name="saini" />
-      <Name name="yogesh_1__" />
-      <InnerComp />
-      {InnerComp()}
-      <button onClick={changeName}>click me</button>
+      <h1> Hello world!</h1>
+      <Link href="./about"> go to about page using linking</Link> <br />
+      <Link href="./login"> go to login page using linking</Link>
+      <br />
+      <br />
+      <button onClick={() => navigate("/login")}>
+        go to login page using navigation
+      </button>
+      <br />
+      <button onClick={() => navigate("/about")}>
+        go to about page using navigation
+      </button>
     </div>
   );
 }
-
-const Name = (props) => {
-  return (
-    <div>
-      <h1> my name is {props.name}</h1>
-    </div>
-  );
-};
