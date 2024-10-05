@@ -5,16 +5,19 @@ import { useRouter } from "next/navigation";
 
 const about = () => {
   const router = useRouter();
+  const navigate = (routeName) => {
+    router.push("/about/" + routeName);
+  };
   return (
     <div>
-      <h1> about me</h1>
-      <Link href="/">go to home</Link>
+      <h1>About</h1>
+      <button onClick={() => navigate("aboutCollage")}>about Collage</button>
       <br />
       <br />
-      <button  onClick={() => {
-    console.log("Navigating to home");
-    router.push("/");
-  }}> go to home </button>
+      <button onClick={() => navigate("aboutStudents")}>about Students</button>
+      <br />
+      <br />
+      <button onClick={() => router.push("/")}>back</button>
     </div>
   );
 };

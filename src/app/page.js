@@ -11,14 +11,11 @@ export default function Home() {
   };
   return (
     <div>
-      <h1> Hello world!</h1>
-      <Link href="./about"> go to about page using linking</Link> <br />
-      <Link href="./login"> go to login page using linking</Link>
-      <br />
-      <br />
+      <h1> Home</h1>
       <button onClick={() => navigate("/login")}>
         go to login page using navigation
       </button>
+      <br />
       <br />
       <button onClick={() => navigate("/about")}>
         go to about page using navigation
