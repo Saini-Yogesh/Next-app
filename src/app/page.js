@@ -5,13 +5,15 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 export default function Home() {
+  /*---------------- till lecture 17 --------*/
   const router = useRouter();
   const navigate = (routeName) => {
     router.push(routeName);
   };
   return (
     <div>
-      <h1> Home</h1>
+      {/*---------------- till lecture 17 --------*/}
+      {/* <h1> Home</h1>
       <button onClick={() => navigate("/login")}>
         go to login page using navigation
       </button>
@@ -19,7 +21,11 @@ export default function Home() {
       <br />
       <button onClick={() => navigate("/about")}>
         go to about page using navigation
-      </button>
+      </button> */}
+
+      <Link href="/productList" className={styles.LinkHeading}>
+        <h1 className={styles.heading}>Product List</h1>
+      </Link>
     </div>
   );
 }
