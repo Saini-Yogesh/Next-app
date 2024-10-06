@@ -1,0 +1,8 @@
+.login-main {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  padding: 30px;
+  font-size: 5vmin;
+  list-style: none;
+}
