@@ -1,0 +1,17 @@
+-> what is rendering: 
+            -> generate the HTML code called rendering 
+
+-> rendring type/envioronments:
+            -> client side rendring - generate the HTML code on our browser
+            -> server side rendring - generate the HTML code on server side and the give to us
+
+-> Component-level Client and server rendring:
+            -> convert some Components to HTML on server side and some Component on client side
+               called Component-level Client and server rendring
+
+-> what is pre-rendering:
+            -> generate HTML code in adace on the server side
+
+-> pre-rendering type:
+            -> static generation - HTML is genrated an build time and resuied on request
+            -> server side rendering - genrate the HTML code on the base of request

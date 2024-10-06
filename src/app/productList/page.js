@@ -1,19 +1,29 @@
-import CheckPriceButton from "./checkPriceButton";
+"use client";
 
-const ProductList = async () => {
-    
-  let data = await fetch("https://dummyjson.com/products");
-  data = await data.json();
-  let products = data.products;
+import React, { useEffect, useState } from "react";
+
+const ProductList = () => {
+  const [product, setProduct] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        let response = await fetch("https://dummyjson.com/products");
+        let data = await response.json();
+        setProduct(data.products);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <div>
       <h1>Product List</h1>
-      {products.map((item) => (
-        <div>
-          <h3>Name: {item.title}</h3>
-          <CheckPriceButton price={item.price} />
-        </div>
+      {product.map((item) => (
+        <h4 key={item.id}>Name: {item.price}</h4>
       ))}
     </div>
   );
