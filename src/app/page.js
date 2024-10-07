@@ -1,14 +1,18 @@
 "use client";
 import styles from "./page.module.css";
-import Image from "next/image";
-import image1 from "../download.jpg";
 
 export default function Home() {
-  console.log(image1);
   return (
     <div>
-      <h1> image optmization</h1>
-      <Image src={image1} width={800} height={800} />
+      <h1 className={styles.red}>
+        generateMetadata for Dynamic meta data in next.js
+      </h1>
     </div>
   );
 }
+/*
+-> meta data and dynamic meta data? 
+    Ans. titte and descripicationa are dynamic meta data 
+         if we change the meta data according to the page then we can say meta data is dynmic 
+         and we are not changinh with the page are constant with all apge then meta data is static
+*/
