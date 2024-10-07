@@ -8,7 +8,7 @@ const Users = async () => {
     <div>
       <h1> Persons List</h1>
       {data.users.map((item) => (
-        <h3>
+        <h3 key={item.id}>
           Name: {item.firstName} {item.lastName}
         </h3>
       ))}
