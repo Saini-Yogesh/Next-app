@@ -1,0 +1,4 @@
+-> diffrence between normal css and moduler css 
+            -> Normal css will apply on all component that have the same class naame 
+               but moduler css will not apply it has to apply forcefully
+-> 
