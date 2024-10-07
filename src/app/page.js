@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div>
       <h1 className={`${styles.green} ${styles.center}`}>
-        Static site genration in Nect js
+        Static site genration in Next js
       </h1>
     </div>
   );

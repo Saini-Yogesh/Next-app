@@ -1,16 +1,10 @@
-import Link from "next/link";
-import GetUsers from "../../../services/getUsers";
+// import { redirect } from "next/navigation";
 
 const page = async () => {
-  const users = await GetUsers();
+  //   redirect("/"); //the addres can change so we have to redirect from the configration
   return (
     <div>
       <h1>User List</h1>
-      {users.map((item) => (
-        <h3 key={item.id}>
-          <Link href={`/users/${item.id}`}> Name :{item.name}</Link>
-        </h3>
-      ))}
     </div>
   );
 };
