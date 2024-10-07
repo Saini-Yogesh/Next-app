@@ -1,19 +1,18 @@
-import React from "react";
+import Link from "next/link";
+import GetUsers from "../../../services/getUsers";
 
-const Users = async () => {
-  let data = await fetch("https://dummyjson.com/users");
-  data = await data.json();
-  console.log(data.users);
+const page = async () => {
+  const users = await GetUsers();
   return (
     <div>
-      <h1> Persons List</h1>
-      {data.users.map((item) => (
+      <h1>User List</h1>
+      {users.map((item) => (
         <h3 key={item.id}>
-          Name: {item.firstName} {item.lastName}
+          <Link href={`/users/${item.id}`}> Name :{item.name}</Link>
         </h3>
       ))}
     </div>
   );
 };
 
-export default Users;
+export default page;
